@@ -23,7 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   compute_ips = num_compute_nodes.times.collect { |n| compute_ip_base + "#{n+21}" }
 
   config.vm.define "mininet" do |mininet|
-    mininet.vm.box = "ubunty/trusty64"
+    mininet.vm.box = "ubuntu/trusty64"
     mininet.vm.hostname = "mininet"
     mininet.vm.network "private_network", ip: "192.168.50.15"
     mininet.vm.provider :virtualbox do |vb|
