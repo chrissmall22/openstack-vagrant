@@ -40,6 +40,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
+   config.vm.define "devstack-ml2" do |ml2|
+    ml2.vm.box = "ubuntu/trusty64"
+    ml2.vm.hostname = "devstack-ml2"
+    ml2.vm.network "private_network", ip: "192.168.50.40"
+    ml2.vm.provider :virtualbox do |vb|
+      vb.memory = 4096
+    end
+    ml2.vm.provider "vmware_fusion" do |vf|
+      vf.vmx["memsize"] = "4096"
+    end
+    ml2.vm.provision "puppet" do |puppet|
+      puppet.hiera_config_path = "resources/puppet/hiera.yaml"
+      puppet.working_directory = "/vagrant/resources/puppet"
+      puppet.manifests_path = "resources/puppet/manifests"
+      puppet.manifest_file  = "devstack-ml2.pp"
+    end
+  end
+
+
+
   config.vm.define "devstack-control" do |control|
     control.vm.box = "ubuntu/trusty64"
     control.vm.hostname = "devstack-control"

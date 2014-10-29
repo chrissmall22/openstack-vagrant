@@ -23,6 +23,10 @@
     "devstack-compute-3": {
       "name": "devstack-compute-3",
       "ipaddress": "192.168.50.23"
-    }
+    },
+    "devstack-ml2": {
+      "name": "devstack-ml2",
+      "ipaddress": "192.168.50.40"
+    }    
   }
 }
