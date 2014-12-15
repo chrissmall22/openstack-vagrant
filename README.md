@@ -5,17 +5,17 @@ Vagrant files for OpenStack development and experimentation
 
 # Installation
 
-You can download an install for your system from [here](http://www.vagrantup.com/downloads.html)
+You can download the Vagrant client for your system from [here](http://www.vagrantup.com/downloads.html)
 
 # Usage
 
 Vagrant is a tool for creating development/test environments.
 The environment created for this project is as follows:
 
-1 x DevStack Control/Compute VM for OVS
-1 x DevStack Compute VM for OVS
-1 x DevStack with ML2 (without OVS Mechanism Driver)
-1 x Mininet VM
++ 1 x DevStack Control/Compute VM for OVS
++ 1 x DevStack Compute VM for OVS
++ 1 x DevStack with ML2 (without OVS Mechanism Driver)
++ 1 x Mininet VM
 
 It's assumed you already have an OVSDB development environment set up.
 
