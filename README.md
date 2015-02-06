@@ -12,9 +12,9 @@ You can download the Vagrant client for your system from [here](http://www.vagra
 Vagrant is a tool for creating development/test environments.
 The environment created for this project is as follows:
 
-+ 1 x DevStack Control/Compute VM for OVS
-+ 1 x DevStack Compute VM for OVS
-+ 1 x DevStack with ML2 (without OVS Mechanism Driver)
++ 1 x DevStack Control/Compute VM for ODL
++ 1 x DevStack Compute VM for ODL
++ 1 x DevStack with ML2 (without ODL Mechanism Driver)
 + 1 x Mininet VM
 
 It's assumed you already have an OVSDB development environment set up.
